@@ -52,11 +52,7 @@ The website includes multiple pages, dynamic content fetched from an API, and fo
 
 ### Fetch API
 
-Projects are retrieved from an external API:
-
-```
-https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects
-```
+Projects are retrieved from an external API
 
 ### Dynamic Routing
 
