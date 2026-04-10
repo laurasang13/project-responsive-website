@@ -30,6 +30,12 @@ html {
   background: none;
   border: none;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle:hover {
+  color: #072ac8;
+  transform: scale(1.1);
 }
 
 .nav-menu a {
@@ -173,17 +179,23 @@ nav a {
   }
 
   .nav-menu {
-    display: none;
-    flex-direction: column;
-    gap: 15px;
-    background: white;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    padding: 20px 0;
-    text-align: center;
-  }
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px); 
+
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
 
   .nav-menu a:hover {
   color: #072ac8;
@@ -204,16 +216,10 @@ nav a {
 
   nav {
     display: flex;
-    flex-direction: row; /* 👈 CAMBIAR */
-    justify-content: space-between; /* 👈 AÑADIR */
+    flex-direction: row; 
+    justify-content: space-between; 
     align-items: center;
     padding: 15px;
-  }
-
-  .nav-menu {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
   }
 
   nav ul {

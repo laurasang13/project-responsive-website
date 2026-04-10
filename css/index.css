@@ -59,16 +59,26 @@
   padding: 12px 20px;
   border-radius: 4px;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .btn-secondary {
   color: #555;
   padding: 12px 20px;
   text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #16349a; 
+  transform: translateY(-2px); 
+  box-shadow: 0 8px 20px rgba(30, 64, 175, 0.3); 
 }
 
 .btn-secondary:hover {
-  text-decoration: underline;
+  color: #1e40af; 
+  transform: translateX(5px);
+  text-decoration: none;
 }
 
 .card-top {
@@ -312,6 +322,7 @@
   background: #e5e7eb;
   padding: 15px 20px;
   width: 350px;
+  margin-top: 20px;
 }
 
 .input-container input {
@@ -332,5 +343,12 @@
   border: none;
   padding: 15px 30px;
   cursor: pointer;
+  margin-top: 20px;
+}
+
+.btn-contact:hover {
+  background: #16349a; 
+  transform: translateY(-2px); 
+  box-shadow: 0 8px 20px rgba(30, 64, 175, 0.3); 
 }
 
