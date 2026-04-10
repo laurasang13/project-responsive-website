@@ -19,6 +19,9 @@ body {
   background-color: #f4f6fc;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 /* Header */
 
 .menu-toggle {
@@ -82,12 +85,13 @@ nav a {
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 80px;
+  padding: 100px;
   background-color: #f4f6fc;
 }
 
 .footer-left {
   max-width: 300px;
+  padding-left: 30px;
 }
 
 .footer-left h2 {
@@ -98,6 +102,8 @@ nav a {
 .footer-right {
   display: flex;
   gap: 80px;
+  
+  padding-right: 50px;
 }
 
 .footer-column {
@@ -114,6 +120,11 @@ nav a {
 .footer-column p:hover {
   color: #072ac8;
   transform: translateX(5px);
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: inherit;
 }
 
 
@@ -230,6 +241,7 @@ nav a {
 
   .hero {
     padding: 20px;
+    flex-direction: column;
   }
 
   .hero h1 {
@@ -258,6 +270,9 @@ nav a {
 
   .Testimonial {
   padding: 60px 20px;
+  min-height: auto;
+  background-size: cover;
+  background-position: center;
   }
   .highlight {
   padding: 0 10px;
@@ -306,6 +321,9 @@ nav a {
     align-items: center;
   }
 
+  .questions {
+    width: 100%;
+  }
   .newsletter {
     flex-direction: column;
     align-items: center;
@@ -322,6 +340,11 @@ nav a {
   .footer-right {
     flex-direction: column;
     gap: 20px;
+
+  }
+
+  .footer-column {
+    align-items: center;
   }
 
   .form-row {

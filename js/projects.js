@@ -11,7 +11,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     //console.log("ID:", id);
 
 
-    // project details projects.hmtl 
+    // PROJECT DETAILS projects.hmtl 
+
+    // project id detection and targets organization
 
     if (id) {
       const project = data.find(p => p.uuid == id);
@@ -51,7 +53,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       return; 
     }
 
-    // index project cards
+    // INDEX projects cards
 
     const container = document.querySelector(".projects-container");
 

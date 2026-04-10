@@ -124,6 +124,9 @@
   width: 100%;
   display: flex;
   justify-content: center;
+   min-height: auto;
+  background-size: cover;
+  background-position: center;
 }
 
 .testimonial-container {
@@ -149,16 +152,6 @@
   max-width: 700px;
   margin: 0 auto 60px;
   line-height: 1.5;
-}
-
-.orbit {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.1;
-  width: 800px;
-  pointer-events: none;
 }
 
 .testimonial-logos img {
@@ -197,6 +190,7 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .testimonial-kristin {
@@ -217,7 +211,7 @@
 /*services*/
 
 .services {
-  padding: 60px 80px;
+  padding: 60px;
   background-color: #f5f6fa;
   padding-bottom: 120px;
   margin: 0 auto;
@@ -288,6 +282,10 @@
   background-color: #f7c600;
   text-align: center;
   padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .questions h2 {
@@ -333,41 +331,6 @@
   color: white;
   border: none;
   padding: 15px 30px;
-  cursor: pointer;
-}
-
-
-
-/*Footer*/
-
-.footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 80px;
-  background-color: #f4f6fc;
-}
-
-.footer-left {
-  max-width: 300px;
-}
-
-.footer-left h2 {
-  color: #072ac8;
-  margin-bottom: 20px;
-}
-
-.footer-right {
-  display: flex;
-  gap: 80px;
-}
-
-.footer-column {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.footer-column p {
   cursor: pointer;
 }
 
