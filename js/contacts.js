@@ -12,26 +12,26 @@ window.onload = () => {
 
     // obligatory task
     if (name.toLowerCase() === "ironhack") {
-      alert("You cannot be Ironhack, because I am Ironhack.");
+      showPopup("You cannot be Ironhack, because I am Ironhack.");
       return;
     }
 
     // obligatory fields validation
     if (!name || !email || !phoneNumber || !message) {
-      alert("Please fill all fields");
+      showPopup("Please fill all fields");
       return;
     }
 
     // email validation
     const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
     if (!email.match(emailPattern)) {
-      alert("Invalid email format");
+      showPopup("Invalid email format");
       return;
     }
 
     // phone number validation
     if (phoneNumber.length < 9) {
-      alert("Phone number must have at least 9 digits");
+      showPopup("Phone number must have at least 9 digits");
       return;
     }
 
@@ -48,8 +48,20 @@ window.onload = () => {
     console.log("Phone:", phoneNumber);
     console.log("Message:", message);
 
-    alert("Form submitted successfully 🚀");
+    showPopup("Form submitted successfully 🚀");
 
     form.reset();
   });
 };
+
+function showPopup(message) {
+  const popup = document.getElementById("customPopup");
+  const popupText = document.getElementById("popupMessage");
+
+  popupText.textContent = message;
+  popup.classList.remove("hidden");
+}
+
+function closePopup() {
+  document.getElementById("customPopup").classList.add("hidden");
+}

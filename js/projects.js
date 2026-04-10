@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id");
 
-    console.log("ID:", id);
+    //console.log("ID:", id);
 
 
     // project details projects.hmtl 
@@ -27,6 +27,26 @@ document.addEventListener("DOMContentLoaded", async () => {
       
       document.querySelector(".project-content-1").textContent = project.content;
       document.querySelector(".project-content-2").textContent = project.content;
+
+      const container = document.querySelector(".projects-container");
+      if (container) {
+        container.innerHTML = "";
+
+        const otherProjects = data.filter(p => p.uuid != id);
+
+        otherProjects.slice(0, 3).forEach(project => {
+          container.innerHTML += `
+            <div class="project-card">
+              <img src="${project.image}" alt="${project.name}" />
+              <div class="project-content">
+                <h3>${project.name}</h3>
+                <p>${project.description}</p>
+                <a href="projects.html?id=${project.uuid}">Learn more</a>
+              </div>
+            </div>
+          `;
+        });
+      }
 
       return; 
     }

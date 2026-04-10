@@ -21,6 +21,24 @@ body {
 
 /* Header */
 
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-menu a {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #072ac8;
+  transform: translateY(-2px);
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -53,6 +71,9 @@ nav a {
   font-weight: 500;
 }
 
+.mobile-only {
+  display: none;
+}
 
 
 
@@ -87,8 +108,13 @@ nav a {
 
 .footer-column p {
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
+.footer-column p:hover {
+  color: #072ac8;
+  transform: translateX(5px);
+}
 
 
 /* Responsive Design */
@@ -99,11 +125,11 @@ nav a {
     padding: 20px 40px;
   }
 
+
   .hero {
-    flex-direction: column;
-    text-align: center;
     padding: 40px;
   }
+
 
   .hero-left {
     max-width: 100%;
@@ -128,12 +154,55 @@ nav a {
   }
 }
 
+
 @media (max-width: 768px) {
 
-  nav {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    background: white;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .nav-menu a:hover {
+  color: #072ac8;
+  transform: translateX(5px);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row; /* 👈 CAMBIAR */
+    justify-content: space-between; /* 👈 AÑADIR */
+    align-items: center;
     padding: 15px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 
   nav ul {
@@ -146,17 +215,18 @@ nav a {
   }
 
   .btn-contact {
-  padding: 10px 20px;
-}
+    padding: 10px 20px;
+  }
 
-.contact h1 {
-  margin-top: 30px; 
-  font-size: 28px;
-}
+  .contact h1 {
+    margin-top: 30px; 
+    font-size: 28px;
+  }
 
-.contact-form {
-  padding: 0 15px;
-}
+  .contact-form {
+    padding: 0 15px;
+    
+  }
 
   .hero {
     padding: 20px;
@@ -182,6 +252,37 @@ nav a {
   .clients {
     flex-wrap: wrap;
     gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Testimonial {
+  padding: 60px 20px;
+  }
+  .highlight {
+  padding: 0 10px;
+  }
+
+  .testimonial-container {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .testimonial-profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .testimonial-kristin {
+    text-align: center;
+  }
+
+  .tell-us {
+    font-size: 28px;
+  }
+
+  .testimonial-logos {
+    display: none;
   }
 
   .projects {
@@ -190,6 +291,10 @@ nav a {
 
   .projects-container {
     flex-direction: column;
+  }
+
+  .services {
+  text-align: center;
   }
 
   .services {

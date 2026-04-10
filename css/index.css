@@ -8,6 +8,8 @@
   justify-content: space-between;
   padding: 80px;
   background-color: #f5f6fa;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .hero-main {
@@ -19,7 +21,6 @@
 
 .hero-right {
   position: relative;
-  flex: 1;
   display: flex;
   justify-content: center;
 }
@@ -52,14 +53,6 @@
   text-decoration: none;
 }
 
-/*.btn-primary {
-  background-color: #072ac8;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 8px;
- 
-}*/
-
 .btn-primary {
   background: #1e40af;
   color: white;
@@ -78,22 +71,24 @@
   text-decoration: underline;
 }
 
-
 .card-top {
-  top: 20px;
-  left: 40px;
+  top: 10%;
+  left: -30px;
   position: absolute;
   width: 160px;
   z-index: 2;
 }
 
 .card-bottom {
-  bottom: 20px;
-  right: 0;
+  bottom: 10%;
+  right: -30px;
   position: absolute;
   width: 160px;
   z-index: 2;
 }
+
+/* clients */
+
 .clients {
   display: flex;
   justify-content: center;
@@ -126,6 +121,19 @@
   overflow: hidden;
   background-image: url(/assets/testimonial-memojis/orbit.png);
   background-size: cover;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.testimonial-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.testimonial-coments {
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .tell-us {
@@ -216,6 +224,11 @@
   align-items: center;
 }
 
+.services {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .services h2 {
   font-size: 40px;
   margin-bottom: 40px;
@@ -233,8 +246,13 @@
   padding: 30px;
   border-radius: 8px;
   width: 300px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
+}
+
+.services-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
 .services-card img {
